@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+  
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url("assets/cursor.png"), auto;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.layouts{
+    max-width: 476px;
+    background-color: white;
+    margin: 0 auto;
+    height: 100vh;
+    border: 1px solid black;
+    position: relative;
+}
+
+.navbar {
+    background-color: #576fff;
+    padding: 16px;
+    text-align: center;
+}
+
+.navbar h1{
+    color: white;
+    font-weight: 900;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    padding: 36px;
+   gap: 18px;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background-color: white;
+    box-shadow: 0px 0px 4px 1px #999;
+}
+
+.item-image{
+    width: 50%;
+}
+
+.item-submit,
+.led-submit {
+    background-color: #579fff;
+    padding: 4px 8px;
+    width: 100%;
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+    border: none ;
+}
+
+.page-title{
+    padding: 16px;
+}
+
+.page-title h3{
+    text-align: center;
+    font-weight: 900;
+    font-size: xx-large;
+}
+
+.leds {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px;
+}
+
+.led-location-text{
+    font-weight: 700;
+}
+.led {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background-color: white;
+    box-shadow: 0px 0px 4px 1px #999;
+}
+
+.led-image {
+    width: 100px;
+    object-fit: cover;
+}
+
+.bottombar{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    background-color: #576fff;
+    width: 100%;
+}
+
+.bottombar ul {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    padding: 8px;
+}
+
+.bottombar ul li {
+    flex:21;
+    text-align: center;
+}
+
+.bottombar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    display: block;
+    
+}
+
+.bottombar ul li a:hover{
+    scale: 110%;
+    transform: all .3s ease-in-out;
+}
+
