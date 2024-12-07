@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/led', function () {
     return view('led');
 });
+
+Route::get('/front', function () {
+    return view('front');
+});
