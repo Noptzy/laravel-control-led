@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ControlLedController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,10 @@ Route::get('/led', function () {
 Route::get('/front', function () {
     return view('front');
 });
+
+
+Route::get('/control_led', [ControlLedController::class, 'index']);
+Route::get('/led/{room}', [ControlLedController::class, 'getLedState']);
+Route::post('/led/{room}', [ControlLedController::class, 'setLedState']);
+
+

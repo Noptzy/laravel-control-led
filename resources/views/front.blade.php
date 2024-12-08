@@ -232,6 +232,43 @@
     </div>
 
     <script>
+
+        const endpoint = "http://192.168.100.32";
+
+        function toggleDevice(room) {
+            fetch(`${endpoint}/${room}`, { method: "POST" })
+                .then(() => {
+                    updateDeviceState(room);
+                })
+                .catch(error => console.error("Error:", error));
+        }
+
+        function updateDeviceState(room) {
+            fetch(`${endpoint}/${room}`, { method: "GET" })
+                .then(response => response.text())
+                .then(state => {
+                    const device = document.getElementById(`led${room}`);
+                    const switchElement = document.getElementById(`${room}Switch`);
+                    if (state === "ON") {
+                        device.classList.add("on");
+                        switchElement.checked = true;
+                    } else {
+                        device.classList.remove("on");
+                        switchElement.checked = false;
+                    }
+                })
+                .catch(error => console.error("Error:", error));
+        }
+
+        function updateAllDevices() {
+            ["tamu", "dapur", "kamar", "makan"].forEach(updateDeviceState);
+        }
+
+        setInterval(updateAllDevices, 1000);
+        updateAllDevices();
+
+
+
         // Update date and time
         function updateDateTime() {
             const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"];
@@ -254,6 +291,7 @@
             const device = document.getElementById(id);
             device.classList.toggle("on");
         }
+
     </script>
 </body>
 
