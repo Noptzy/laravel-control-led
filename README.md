@@ -37,7 +37,7 @@ php artisan key:generate
 ### 5. Menjalankan Proyek
 - Jalankan server Laravel:
 ```bash
-php artisan serve
+php artisan serve --host={ipmu} --port=8080
 ```
 - Akses proyek melalui browser menggunakan alamat yang ditampilkan.
 
@@ -47,6 +47,5 @@ php artisan serve
 
 ## Teknologi yang Digunakan
 - Laravel
-- NodeMCU
-- Arduino Uno
-- Blade (Laravel Templating)
+- NodeMCU Esp8266
+- 
