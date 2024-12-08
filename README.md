@@ -48,4 +48,3 @@ php artisan serve --host={ipmu} --port=8080
 ## Teknologi yang Digunakan
 - Laravel
 - NodeMCU Esp8266
-- 
